@@ -127,8 +127,21 @@ Currently, there are four path planners implemented in the simulator (Geometric 
 Here is a simple visualization,
 
 
+### RRT (Rapidly Exploring Random Tree) path planner,
+
+![image](https://github.com/markusbuchholz/uav-blue-robotics-path-planners/assets/30973337/db939701-5475-4f4a-8295-2fd7afcb095c)
+
+### Dijkstra path planner,
+
+![image](https://github.com/markusbuchholz/uav-blue-robotics-path-planners/assets/30973337/85d7c70e-5ae2-472d-ab93-727286dc818e)
 
 
+### PRM (Probabilistic roadmap) path planner,
+
+![image](https://github.com/markusbuchholz/uav-blue-robotics-path-planners/assets/30973337/3f53d6ae-cec2-4d98-b614-7e2c5514e240)
+
+### A* path planner,
+![image](https://github.com/markusbuchholz/uav-blue-robotics-path-planners/assets/30973337/7bb65625-8bdf-44ef-aed2-d776c50960cd)
 
 
 
