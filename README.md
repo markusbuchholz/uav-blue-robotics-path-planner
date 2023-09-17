@@ -48,31 +48,31 @@ For Unmanned Surface Vehicles (USVs) and Autonomous Underwater Vehicles (AUVs):
 
 ### Here are some common types of path planners used for USVs:
 
-* Geometric/Grid-Based Path Planning Algorithms:
+#### Geometric/Grid-Based Path Planning Algorithms:
 
-Specifics: These algorithms either focus on the geometric properties of the environment or discretize the environment into a grid. In the grid-based approach, each cell in the grid is classified as either free or occupied, and the algorithms search this grid to find a path.
+* Specifics: These algorithms either focus on the geometric properties of the environment or discretize the environment into a grid. In the grid-based approach, each cell in the grid is classified as either free or occupied, and the algorithms search this grid to find a path.
 
-Differences from other groups: They provide a structured way to represent the environment, either through direct geometric representations or through grids. They don't typically rely on bio-inspired or machine learning techniques.
+* Differences from other groups: They provide a structured way to represent the environment, either through direct geometric representations or through grids. They don't typically rely on bio-inspired or machine learning techniques.
 
-Strengths: They can be straightforward and deterministic, providing solutions that are often optimal in terms of path length or other criteria.
+* Strengths: They can be straightforward and deterministic, providing solutions that are often optimal in terms of path length or other criteria.
 
-Example: RRT, Dijkstra, A*, D*-lite, Probabilistic Road Maps algorithms
+* Example: RRT, Dijkstra, A*, D*-lite, Probabilistic Road Maps algorithms
 
-* Intelligent Path Planning Algorithms:
+#### Intelligent Path Planning Algorithms:
 
-Specifics: These algorithms leverage machine learning and other intelligent techniques. They can adapt and learn from the environment, making them suitable for dynamic and unpredictable scenarios.
+* Specifics: These algorithms leverage machine learning and other intelligent techniques. They can adapt and learn from the environment, making them suitable for dynamic and unpredictable scenarios.
 
-Differences from other groups: They can adapt and learn, making them suitable for dynamic environments. They might require more computational resources and training data.
+* Differences from other groups: They can adapt and learn, making them suitable for dynamic environments. They might require more computational resources and training data.
 
-Strengths: Strong adaptability to the environment, especially in complex dynamic environments. They can improve over time with more data.
+* Strengths: Strong adaptability to the environment, especially in complex dynamic environments. They can improve over time with more data.
 
-Example: Particle Swarm Optimization (PSO), Ant Colony Optimization(ACO), Genetic algorithm (GA), Fireﬂy Algorithm(FA).
+* Example: Particle Swarm Optimization (PSO), Ant Colony Optimization(ACO), Genetic algorithm (GA), Fireﬂy Algorithm(FA).
 
-* Reinforcement Learning in Path Planni
+#### Reinforcement Learning in Path Planning:
 
-Reinforcement learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize a reward. In the context of path planning, the agent is typically the AUV, the environment is the space in which the vehicle operates (water), and the reward is related to successfully navigating from a start to a goal without collisions, while possibly minimizing time or energy.
+```Reinforcement learning (RL)``` is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize a reward. In the context of path planning, the agent is typically the AUV, the environment is the space in which the vehicle operates (water), and the reward is related to successfully navigating from a start to a goal without collisions, while possibly minimizing time or energy.
 
-Details:
+##### Details:
 
 RL is suitable for path planning in complex and unknown dynamic environments. Unlike supervised learning, RL learns control strategies from interactions between the system and the environment. For instance, an AUV selects an action, the environment changes state, and a reward signal is generated, guiding the AUV's next action.
 RL does not require prior knowledge and is real-time, efficient, and fast when solving path planning problems. However, challenges include convergence speed and balancing exploration and exploitation.
@@ -80,20 +80,18 @@ Deep Reinforcement Learning (DRL) combines the perception capabilities of deep l
 DRL has been applied to AUV obstacle avoidance and navigation to optimize search paths.
 Despite its potential, DRL can have disadvantages such as long training times and overfitting to specific environments.
 
-Advantages:
+##### Advantages:
+ - Adaptability: RL can adapt to changing environments, making it suitable for dynamic scenarios.
+ - No Need for Prior Knowledge: RL algorithms can learn optimal strategies without prior knowledge of the environment.
+ - Real-time Decision Making: RL can make real-time decisions based on the current state of the environment.
+ - Complex Environment Handling: DRL can handle complex environments by leveraging deep learning's perception capabilities.
 
-Adaptability: RL can adapt to changing environments, making it suitable for dynamic scenarios.
-No Need for Prior Knowledge: RL algorithms can learn optimal strategies without prior knowledge of the environment.
-Real-time Decision Making: RL can make real-time decisions based on the current state of the environment.
-Complex Environment Handling: DRL can handle complex environments by leveraging deep learning's perception capabilities.
+##### Challenges:
+ - Convergence Speed: Ensuring that the RL algorithm converges to an optimal policy in a reasonable amount of time can be challenging.
+ - Balance of Exploration and Exploitation: Striking the right balance between exploring new paths and exploiting known paths is crucial.
+- Training Time and Overfitting: DRL models can take a long time to train and might overfit to specific training environments.
 
-Challenges:
-
-Convergence Speed: Ensuring that the RL algorithm converges to an optimal policy in a reasonable amount of time can be challenging.
-Balance of Exploration and Exploitation: Striking the right balance between exploring new paths and exploiting known paths is crucial.
-Training Time and Overfitting: DRL models can take a long time to train and might overfit to specific training environments.
-
-Examples:
+##### Examples:
 The Sarsa (λ) algorithm, a type of RL algorithm, was used for AUV path planning to reduce the cost of removing sea urchins.
 DRL, combined with the asynchronous advantage actor-critic (A3C) network structure, was used to enable AUVs to explore unknown environments.
 
@@ -127,6 +125,11 @@ The trajectory generation module is tasked with creating the reference trajector
 
 Currently, there are four path planners implemented in the simulator (Geometric and Grid-Based Path Planning Algorithms). Additionally, all of them can be run independently from the simulator.
 Here is a simple visualization,
+
+
+
+
+
 
 
 
