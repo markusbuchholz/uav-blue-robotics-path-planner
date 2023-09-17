@@ -110,13 +110,9 @@ While path planning generally operates within a geometric space, trajectory plan
 To clarify we can derive. common terms,
 ```Path Planning```: Focuses on creating a geometric path by identifying a series of waypoints to navigate from a starting point to a destination.
 
-```Trajectory Generation```: This is an extension of path planning. It not only considers the geometric path but also factors in constraints like turning angles, velocity, and acceleration. It assigns a temporal aspect (time law) to the geometric path, making it more dynamic.
-
-```Path Following```: This involves adhering to a predetermined path in space without time constraints. The primary objective is to remain on the geometric path, progressing at any speed until the destination is reached.
-
-```Trajectory Tracking```: Unlike path following, trajectory tracking is time-bound. It dictates that the UAV must be at a specific location at a designated time while adhering to the trajectory.
-
 ```Path Smoothing```: This process refines a sequence of waypoints. It optimally connects them while considering the vessel's limited curvature or turning radius, resulting in a streamlined path.
+
+```Trajectory Generation```: This is an extension of path planning. It not only considers the geometric path but also factors in constraints like turning angles, velocity, and acceleration. It assigns a temporal aspect (time law) to the geometric path, making it more dynamic.
 
 The trajectory generation module is tasked with creating the reference trajectory for UAV. The MPC controller generates an optimal input, ensuring the UAV adheres to the reference trajectory within set constraints.Concluding the control loop is the localization module, which derives state estimations of the robot from sensor readings. 
 
