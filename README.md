@@ -149,8 +149,8 @@ For complete installation visit [Orca4](https://github.com/clydemcqueen/orca4).
 For running simulator in ```Docker```,
 
 ```bash
-git clone 
-cd 
+git clone https://github.com/markusbuchholz/uav-blue-robotics-path-planners
+cd uav-blue-robotics-path-planners/docker
 ./build.sh
 ```
 
