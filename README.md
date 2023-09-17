@@ -107,7 +107,7 @@ Path planning plays a pivotal role in the advancement of Unmanned Surface Vehicl
 
 While path planning generally operates within a geometric space, trajectory planning or generation extends to include temporal properties, such as dynamics. 
 
-To clarify we can derive. common terms,
+To clarify, we can derive. common terms,
 ```Path Planning```: Focuses on creating a geometric path by identifying a series of waypoints to navigate from a starting point to a destination.
 
 ```Path Smoothing```: This process refines a sequence of waypoints. It optimally connects them while considering the vessel's limited curvature or turning radius, resulting in a streamlined path.
@@ -115,6 +115,8 @@ To clarify we can derive. common terms,
 ```Trajectory Generation```: This is an extension of path planning. It not only considers the geometric path but also factors in constraints like turning angles, velocity, and acceleration. It assigns a temporal aspect (time law) to the geometric path, making it more dynamic.
 
 The trajectory generation module is tasked with creating the reference trajectory for UAV. The MPC controller generates an optimal input, ensuring the UAV adheres to the reference trajectory within set constraints.Concluding the control loop is the localization module, which derives state estimations of the robot from sensor readings. 
+
+![image](https://github.com/markusbuchholz/uav-blue-robotics-path-planners/assets/30973337/8e74d105-4e97-4f62-bd81-2167c0d2df69)
 
 
 ## Path planners in the simulator
@@ -138,8 +140,6 @@ Here is a simple visualization,
 
 ### A* path planner,
 ![image](https://github.com/markusbuchholz/uav-blue-robotics-path-planners/assets/30973337/7bb65625-8bdf-44ef-aed2-d776c50960cd)
-
-
 
 
 ### Usage
