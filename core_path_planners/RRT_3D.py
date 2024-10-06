@@ -76,22 +76,18 @@ def plot_3d(nodes, obstacle, start, goal):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     
-    # Plotting the nodes and edges
-    for node in nodes:
+      for node in nodes:
         if node.parent:
             ax.plot([node.x, node.parent.x], [node.y, node.parent.y], [node.z, node.parent.z], 'b-')
     
-    # Plotting the obstacle
-    x_start, y_start, z_start = obstacle['corner']
+      x_start, y_start, z_start = obstacle['corner']
     x_size, y_size, z_size = obstacle['size']
-    ax.bar3d(x_start, y_start, z_start, x_size, y_size, z_size, color='r')
+    ax.bar3d(x_start, y_start, z_start, x_size, y_size, z_size, color=(1, 0, 0, 0.5))
     
-    # Plotting the start and goal
     ax.scatter(start.x, start.y, start.z, c='g', s=100, label='Start')
     ax.scatter(goal.x, goal.y, goal.z, c='y', s=100, label='Goal')
     
-    # Plotting the solution path
-    path_node = goal
+     path_node = goal
     while path_node.parent:
         ax.plot([path_node.x, path_node.parent.x], [path_node.y, path_node.parent.y], [path_node.z, path_node.parent.z], 'g-', linewidth=2.5)
         path_node = path_node.parent
