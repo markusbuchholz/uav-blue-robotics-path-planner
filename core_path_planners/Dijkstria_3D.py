@@ -88,7 +88,7 @@ def plot_3d(path_nodes, obstacle, start, goal):
     
     x_start, y_start, z_start = obstacle['corner']
     x_size, y_size, z_size = obstacle['size']
-    ax.bar3d(x_start, y_start, z_start, x_size, y_size, z_size, color='r')
+     ax.bar3d(x_start, y_start, z_start, x_size, y_size, z_size, color=(1, 0, 0, 0.5))
     
     ax.scatter(start.x, start.y, start.z, c='g', s=100, label='Start')
     ax.scatter(goal.x, goal.y, goal.z, c='y', s=100, label='Goal')
